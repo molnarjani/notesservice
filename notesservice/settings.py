@@ -29,6 +29,9 @@ ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
+OWN_APPS = [
+    'notes'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    *OWN_APPS
 ]
 
 MIDDLEWARE = [
