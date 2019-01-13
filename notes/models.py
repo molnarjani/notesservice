@@ -1,8 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django_extensions.db.models import TimeStampedModel, TitleSlugDescriptionModel
 
 
-class Note(models.Model):
+class Note(TimeStampedModel, TitleSlugDescriptionModel):
     owner = models.ForeignKey(User, on_delete=models.SET_DEFAULT, default=None)
-    title = models.CharField(max_length=255)
-    description = models.TextField()

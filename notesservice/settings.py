@@ -33,6 +33,11 @@ OWN_APPS = [
     'notes'
 ]
 
+VENDOR_APPS = [
+    'rest_framework',
+    'django_extensions'
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    *VENDOR_APPS,
     *OWN_APPS
 ]
 
