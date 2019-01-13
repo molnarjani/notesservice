@@ -3,8 +3,10 @@ version: '3'
 services:
   db:
     image: postgres
+    container_name: notesdb
   web:
     build: .
+    container_name: notesbackend
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
