@@ -2,3 +2,4 @@ Django
 psycopg2
 djangorestframework
 django-extensions
+django-cors-headers
