@@ -3,9 +3,11 @@ version: '3'
 services:
   db:
     image: postgres
+    container_name: notesdb
     volumes:
       - pgdata:/var/lib/postgresql/data
   web:
+    container_name: notesbackend
     build: .
     entrypoint: /code/docker-entrypoint.sh
     volumes:
